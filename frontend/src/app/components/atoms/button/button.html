@@ -1,0 +1,6 @@
+<button 
+  [ngClass]="['custom-btn', variant === 'primary' ? 'btn-primary' : '']" 
+  [disabled]="disabled" 
+  (click)="onClick()">
+  <ng-content></ng-content> 
+</button>

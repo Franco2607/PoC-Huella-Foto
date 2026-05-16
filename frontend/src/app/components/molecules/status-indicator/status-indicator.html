@@ -1,0 +1,6 @@
+<app-status-badge [imagePreview]="imageBase64">
+  
+    <app-icon *ngIf="isSuccess" name="check"></app-icon>
+    <app-icon *ngIf="!isSuccess" [name]="defaultIcon"></app-icon>
+  
+  </app-status-badge>

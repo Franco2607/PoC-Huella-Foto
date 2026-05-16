@@ -1,0 +1,28 @@
+<div class="biometric-row">
+  <div class="info-side">
+    <h3>Huella</h3>
+    <p>Sube la huella del propietario.</p>
+  </div>
+
+  <div class="card-side">
+    <div class="card">
+
+      <app-status-indicator 
+        [isSuccess]="!!huellaTemplate" 
+        defaultIcon="huella">
+      </app-status-indicator>
+      
+      <div class="card-content">
+        <h4>Sube una imagen</h4>
+        <p>Mín. 400×400px, JPEG, PNG, hasta 5 MB.</p>
+        
+        <app-action-button 
+          [text]="huellaTemplate ? 'Reemplazar' : 'Subir'"
+          [isLoading]="estaCapturando"
+          (clicked)="solicitarHuella()">
+        </app-action-button>
+      </div>
+
+    </div>
+  </div>
+</div>

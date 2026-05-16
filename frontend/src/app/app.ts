@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BiometricCaptureComponent } from './components/biometric-capture/biometric-capture.component/biometric-capture.component';
+import { BiometricCaptureComponent } from './pages/biometric-enrollment/biometric-enrollment';
 
 @Component({
   selector: 'app-root',

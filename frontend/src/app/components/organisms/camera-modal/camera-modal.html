@@ -2,15 +2,15 @@
   <div class="camera-content">
     <h3>Tomar Foto del Conductor</h3>
     
-    
     <div class="video-container">
       <video #videoElement class="video-preview" autoplay playsinline></video>
       <canvas #canvasElement width="640" height="480" hidden></canvas>
     </div>
 
     <div class="camera-actions">
-      <button class="btn-cancel" (click)="cancelar()">Cancelar</button>
-      <button class="btn-primary" (click)="tomarFoto()">📸 Capturar Foto</button>
+      <app-button (clicked)="cancelar()">Cancelar</app-button>
+      
+      <app-button variant="primary" (clicked)="tomarFoto()">📸 Capturar Foto</app-button>
     </div>
   </div>
 </div>

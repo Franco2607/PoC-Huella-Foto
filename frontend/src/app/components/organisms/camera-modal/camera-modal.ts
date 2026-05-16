@@ -1,12 +1,13 @@
 import { Component, Input, Output, EventEmitter, ElementRef, ViewChild, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ButtonComponent } from '../../atoms/button/button';
 
 @Component({
   selector: 'app-modal-camara',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './modal-camara.html',
-  styleUrl: './modal-camara.css',
+  imports: [CommonModule, ButtonComponent],
+  templateUrl: './camera-modal.html',
+  styleUrl: './camera-modal.css',
 })
 export class ModalCamara { 
 
@@ -16,9 +17,9 @@ export class ModalCamara {
   set mostrarCamara(valor: boolean) {
     this._mostrarCamara = valor;
     if (valor === true) {
-      this.setupCamera(); // Se ejecuta inmediatamente al abrir
+      this.setupCamera(); 
     } else {
-      this.detenerCamara(); // Se ejecuta inmediatamente al cerrar
+      this.detenerCamara(); 
     }
   }
 
@@ -44,7 +45,6 @@ export class ModalCamara {
       
       console.log("✅ 2. Permiso concedido. Cámara activada en memoria.");
 
-      // Le damos a Angular una fracción de segundo para que termine de crear el HTML
       setTimeout(() => {
         if (this.videoElement && this.videoElement.nativeElement) {
           console.log("📺 3. Conectando imagen al HTML...");
@@ -53,7 +53,7 @@ export class ModalCamara {
         } else {
           console.error("🚨 ERROR: La cámara prendió, pero Angular no encuentra el #videoElement");
         }
-      }, 100); // 100 milisegundos de espera
+      }, 100);
 
     } catch (err) {
       console.error("🚨 Error grave al acceder a la cámara:", err);

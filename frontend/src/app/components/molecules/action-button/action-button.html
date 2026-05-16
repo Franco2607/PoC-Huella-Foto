@@ -1,0 +1,11 @@
+<app-button 
+  [variant]="variant" 
+  [disabled]="disabled || isLoading"
+  (clicked)="clicked.emit()">
+  
+  <app-icon *ngIf="isLoading" name="spinner"></app-icon>
+  
+  <app-icon *ngIf="!isLoading && iconName" [name]="iconName"></app-icon>
+  
+  <span *ngIf="text">{{ text }}</span>
+</app-button>

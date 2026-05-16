@@ -1,0 +1,25 @@
+/* Extraído de tus tarjetas */
+.base-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+  
+  .success-check {
+    font-size: 24px;
+  }
+  
+  .spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #6b7280;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: rotation 1s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

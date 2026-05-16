@@ -1,16 +1,17 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BiometriaService } from '../../../services/biometria.service';
-import { TarjetaFoto } from '../../tarjeta-foto/tarjeta-foto';
-import { TarjetaHuella } from '../../tarjeta-huella/tarjeta-huella';
-import { ModalCamara } from '../../modal-camara/modal-camara';
+import { BiometriaService } from '../../services/biometria.service';
+import { FaceCaptureCardComponent } from '../../components/organisms/face-capture-card/face-capture-card';
+import { FingerprintCardComponent } from '../../components/organisms/fingerprint-card/fingerprint-card';
+import { ModalCamara } from '../../components/organisms/camera-modal/camera-modal';
+import { ButtonComponent } from '../../components/atoms/button/button';
 
 @Component({
   selector: 'app-biometric-capture',
   standalone: true,
-  imports: [CommonModule, TarjetaFoto, TarjetaHuella, ModalCamara],
-  templateUrl: './biometric-capture.component.html',
-  styleUrls: ['./biometric-capture.component.css']
+  imports: [CommonModule, FaceCaptureCardComponent, FingerprintCardComponent, ModalCamara, ButtonComponent],
+  templateUrl: './biometric-enrollment.html',
+  styleUrls: ['./biometric-enrollment.css']
 })
 export class BiometricCaptureComponent {
   

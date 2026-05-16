@@ -1,0 +1,6 @@
+<ng-container [ngSwitch]="name">
+    <img *ngSwitchCase="'foto'" src="/images/icon-foto.png" class="base-icon" alt="Icono de Foto">
+    <img *ngSwitchCase="'huella'" src="/images/icon-huella.png" class="base-icon" alt="Icono de Huella">
+    <div *ngSwitchCase="'check'" class="success-check">✅</div>
+    <span *ngSwitchCase="'spinner'" class="spinner"></span>
+  </ng-container>

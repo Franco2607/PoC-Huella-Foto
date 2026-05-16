@@ -1,0 +1,27 @@
+<div class="biometric-row">
+  <div class="info-side">
+    <h3>Foto (Opcional)</h3>
+    <p>Captura el rostro del conductor.</p>
+  </div>
+
+  <div class="card-side">
+    <div class="card">
+      
+      <app-status-indicator 
+        [imageBase64]="fotoBase64" 
+        defaultIcon="foto">
+      </app-status-indicator>
+      
+      <div class="card-content">
+        <h4>Tomar fotografía</h4>
+        <p>Asegúrese de tener buena iluminación.</p>
+        
+        <app-action-button 
+          [text]="fotoBase64 ? 'Reemplazar Foto' : 'Subir'"
+          (clicked)="solicitarCamara()">
+        </app-action-button>
+      </div>
+
+    </div>
+  </div>
+</div>
